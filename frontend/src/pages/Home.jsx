@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "../components/Hero";
 import Features from "../components/Features";
 import ServiceCard from "../components/ServiceCard";
+import HomeServices from "../components/HomeServices";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
               <button className="btn-outline">View Case Studies</button>
             </div>
           </div>
+          
 
           <div className="services-cards">
             <ServiceCard
@@ -45,6 +47,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <HomeServices />
 
       <Features />
 
