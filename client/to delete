@@ -1,0 +1,104 @@
+<Route path="/web3/ICO" element={<ICO />} />
+          <Route path="/web3/Token" element={<Token />} />
+          <Route path="/web3" element={<Web3Dev />} />
+          <Route path="/web3/DApp" element={<DApp />} />
+          <Route path="/web3/Wallet" element={<Wallet />} />
+          <Route path="/web3/Exchange" element={<Exchange />} />
+          <Route path="/web3/MLM" element={<MLM />} />
+          <Route path="/web3/DEX" element={<DEX />} />
+<!-- kkj -->
+import { Link, NavLink } from "react-router-dom";
+
+const Navbar = () => {
+  return (
+    <header
+      style={{
+        background: "#ffffff",
+        borderBottom: "1px solid #e0e4f0",
+        position: "sticky",
+        top: 0,
+        zIndex: 9999
+      }}
+    >
+      <div
+        className="container"
+        style={{
+          padding: "14px 0",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: 32
+        }}
+      >
+        <Link
+          to="/"
+          style={{
+            fontWeight: 700,
+            fontSize: 20,
+            letterSpacing: 0.3,
+            color: "#1c45ff"
+          }}
+        >
+          Whitecircle<span style={{ color: "#111827" }}> Group</span>
+        </Link>
+        <nav
+          style={{
+            display: "flex",
+            gap: 20,
+            fontSize: 14,
+            color: "#4b5563"
+          }}
+        >
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/about">About</NavLink>
+         {/* Services dropdown */}
+  <li className="nav-item dropdown">
+    <span className="nav-link dropdown-toggle">Services</span>
+
+    <ul className="dropdown-menu">
+      <li><Link to="/services/software-development">Software Development</Link></li>
+      <li><Link to="/services/analytics">Analytics</Link></li>
+      <li><Link to="/services/industrial-automation">Industrial Automation</Link></li>
+      <li><Link to="/services/iot">Internet Of Things (IOT)</Link></li>
+      <li><Link to="/services/artificial-intelligence">Artificial Intelligence (AI)</Link></li>
+      <li><Link to="/services/database-design">Database Design</Link></li>
+      <li><Link to="/services/consulting">Consulting</Link></li> {/* only if you have this route */}
+      <li><Link to="/services/digital-marketing">Digital Marketing</Link></li>
+      <li><Link to="/services/software-testing">Software Testing</Link></li>
+      <li><Link to="/services/cloud-hosting">Cloud & Hosting Service</Link></li>
+      {/* add/remove items as needed */}
+    </ul>
+  </li>
+
+ 
+<li className="nav-item dropdown">
+  <span className="nav-link dropdown-toggle">WEB3</span>
+
+  <ul className="dropdown-menu">
+    <li><Link to="/web3/ico-development">ICO Development</Link></li>
+    <li><Link to="/web3/token-development">Token Development</Link></li>
+    <li><Link to="/web3/web3-development">Web3 Development</Link></li>
+    <li><Link to="/web3/dapp-development">DApp Development</Link></li>
+    <li><Link to="/web3/wallet-development">Wallet Development</Link></li>
+    <li><Link to="/web3/exchange-development">Exchange Development</Link></li>
+    <li><Link to="/web3/mlm-development">MLM Software Development</Link></li>
+    <li><Link to="/web3/decentralized-exchange">Decentralized Exchange</Link></li>
+  </ul>
+</li>
+
+
+          <NavLink to="/portfolio">Portfolio</NavLink>
+          <NavLink to="/careers">Careers</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
+        </nav>
+        <Link to="/contact">
+          <button className="nav-btn-link">Book Consultation</button>
+        </Link>
+      </div>
+    </header>
+  );
+};
+
+export default Navbar;
+
+
