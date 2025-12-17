@@ -61,7 +61,7 @@ export default function Hero() {
 
         <div style={{ marginTop: 24 }}>
           <button className="btn">Start a Project →</button>
-          <button className="btn-outline">Book Free Consultation</button>
+         
         </div>
       </div>
     </section>

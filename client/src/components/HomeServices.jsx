@@ -54,52 +54,52 @@ export default function HomeServices() {
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Title */}
-        <h2 className="text-4xl font-bold text-center mb-14">
+
+        {/* OUR EXPERTISE */}
+        <p className="text-center text-sm tracking-widest text-blue-500 font-semibold mb-2">
+          OUR EXPERTISE
+        </p>
+
+        {/* TITLE */}
+        <h2 className="text-4xl font-bold text-center mb-12">
           Detailing of our products
         </h2>
 
-        <div className="grid grid-cols-12 gap-10">
-          {/* LEFT INTERNAL NAVBAR */}
-          <div className="col-span-12 md:col-span-3">
-            <div className="bg-white rounded-xl shadow p-4 flex flex-col gap-2">
-              {services.map((item) => (
-                <button
-                  key={item.key}
-                  onClick={() => setActive(item)}
-                  className={`text-left px-4 py-3 rounded-lg font-medium transition
-                    ${
-                      active.key === item.key
-                        ? "bg-blue-600 text-white"
-                        : "text-gray-700 hover:bg-gray-100"
-                    }`}
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div>
-          </div>
+        {/* HORIZONTAL NAVBAR */}
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
+          {services.map((item) => (
+            <button
+              key={item.key}
+              onClick={() => setActive(item)}
+              className={`px-6 py-2 rounded-full font-medium transition
+                ${
+                  active.key === item.key
+                    ? "bg-gray-800 text-white"
+                    : "bg-white text-gray-700 border hover:bg-gray-100"
+                }`}
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
 
-          {/* RIGHT CONTENT */}
-          <div className="col-span-12 md:col-span-9">
-            <div className="bg-white rounded-xl shadow p-8 grid md:grid-cols-2 gap-8 items-center">
-              {/* Image */}
-              <img
-                src={active.image}
-                alt={active.title}
-                className="rounded-lg w-full h-[300px] object-cover"
-              />
+        {/* CONTENT CARD */}
+        <div className="bg-white rounded-xl shadow-lg p-8 grid md:grid-cols-2 gap-10 items-center">
+          {/* IMAGE */}
+          <img
+            src={active.image}
+            alt={active.title}
+            className="rounded-lg w-full h-[320px] object-cover"
+          />
 
-              {/* Text */}
-              <div>
-                <h3 className="text-2xl font-semibold mb-4">
-                  {active.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {active.desc}
-                </p>
-              </div>
-            </div>
+          {/* TEXT */}
+          <div>
+            <h3 className="text-2xl font-semibold mb-4">
+              {active.title}
+            </h3>
+            <p className="text-gray-600 leading-relaxed">
+              {active.desc}
+            </p>
           </div>
         </div>
       </div>
