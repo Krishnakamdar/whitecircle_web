@@ -384,5 +384,41 @@ export const servicesData = {
       "PayPal",
       "Blockchain APIs"
     ]
+  },
+
+  "oracle-development": {
+    title: "Oracle Development Services",
+    bannerTitle: "Scalable Oracle Enterprise Solutions",
+    bannerSubtitle: "Robust databases, ERP systems & enterprise-grade applications.",
+  
+    overview:
+      "We deliver secure and scalable Oracle-based solutions including database management, ERP implementations, and enterprise application development tailored to business needs.",
+  
+    deliverables: [
+      "Oracle Database Development & Optimization",
+      "Oracle ERP (EBS / Fusion) Implementation",
+      "PL/SQL Development",
+      "Oracle Cloud Infrastructure (OCI) Integration",
+      "Enterprise Application Modernization"
+    ],
+  
+    process: [
+      "Requirement analysis",
+      "System architecture & design",
+      "Oracle development & customization",
+      "Performance tuning & security testing",
+      "Deployment & maintenance"
+    ],
+  
+    technologies: [
+      "Oracle Database",
+      "PL/SQL",
+      "Oracle APEX",
+      "Oracle ERP (EBS / Fusion)",
+      "Oracle Cloud Infrastructure (OCI)"
+    ]
   }
+  
+
+
 };
